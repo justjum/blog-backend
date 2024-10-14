@@ -1,7 +1,7 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Build and deploy Node.js app to Azure Web App - jum-blog-API
+name: Build and deploy Node.js app to Azure Web App - jum-blog-api
 
 on:
   push:
@@ -57,15 +57,15 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_ADE820525FF94797B8920C4C2937DD0D }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_986568E3223046DB9DFFF41270D83CF0 }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_F570CB7B98864AB7940950C9F0ED23B6 }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_F0277F6D26D54282A506E0A9EE3D1C62 }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_FBB3B16BBD704ADAAA99D7B39F36C835 }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_AB0D0C231EC14A29A12CA5BF50924569 }}
 
       - name: 'Deploy to Azure Web App'
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v3
         with:
-          app-name: 'jum-blog-API'
+          app-name: 'jum-blog-api'
           slot-name: 'Production'
           package: .
           
